@@ -79,11 +79,11 @@ Session 3: commit;
 检查事务  
 <img width="681" alt="image" src="https://user-images.githubusercontent.com/96624836/197534759-de7e74b7-760f-4517-bdd7-ed7953626d51.png">
 
-Session 3: select * from tab_user;
+Session 3: select * from tab_user;  
 <img width="225" alt="image" src="https://user-images.githubusercontent.com/96624836/197554047-4cba4138-4f5d-4457-93e8-ffd4644cb7ac.png">
 
-
 ### 结论  
+在 RC 隔离级别下，只有已提交的事务可读。
 
 ### 2. 案例 02- 可重复读 RR 隔离级别下的可见性分析  
 
@@ -152,9 +152,10 @@ Session 3: commit;
 检查事务  
 <img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197553657-9ed452a4-a7d5-48e8-b9c9-31e39323f6ea.png">
 
+### 结论
+在 RR 隔离级别下，只有已提交的事务可读。
 
-结论
-结论分析
+### 结论分析
 
 ## 题目 02- 什么是索引？
 ### 要点：
