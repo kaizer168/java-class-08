@@ -137,7 +137,7 @@ Session 1: commit;
 Session 3: select * from tab_user;  
 <img width="228" alt="image" src="https://user-images.githubusercontent.com/96624836/197552525-324a4991-e5bf-4784-acca-64e871d3fbfd.png">
 
-Session 2: update tab_user set name = '诸葛亮' where id = 1;
+Session 2: update tab_user set name = '诸葛亮' where id = 1;  
 检查事务  
 <img width="683" alt="image" src="https://user-images.githubusercontent.com/96624836/197552934-7b8ad11c-e09a-4434-8fd3-8a76933d46cd.png">
 
