@@ -14,7 +14,7 @@
 ### 目标
 ### 操作步骤
 ### 实践过程
-确认 transaction isolation 为 RC
+确认 transaction isolation 为 RC  
 <img width="135" alt="image" src="https://user-images.githubusercontent.com/96624836/197510717-3eeb5490-4437-49b4-868a-d02d59aca70a.png">
 
 <img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
