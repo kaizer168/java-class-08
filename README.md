@@ -20,9 +20,9 @@ Session 2: set session transaction isolation level read committed;
 Session 3: set session transaction isolation level read committed;  
 确认 transaction isolation 为 RC  
 Session 1: select @@tx_isolation;  
-<img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
+<img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">  
 Session 2: select @@tx_isolation;  
-<img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
+<img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">  
 Session 3: select @@tx_isolation;  
 <img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
 
