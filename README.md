@@ -79,6 +79,9 @@ Session 3: commit;
 检查事务  
 <img width="681" alt="image" src="https://user-images.githubusercontent.com/96624836/197534759-de7e74b7-760f-4517-bdd7-ed7953626d51.png">
 
+Session 3: select * from tab_user;
+<img width="225" alt="image" src="https://user-images.githubusercontent.com/96624836/197554047-4cba4138-4f5d-4457-93e8-ffd4644cb7ac.png">
+
 
 ### 结论
 
@@ -92,10 +95,62 @@ Session 2: set session transaction isolation level repeatable read;
 Session 3: set session transaction isolation level repeatable read;
 确认 transaction isolation 为 RR  
 Session 1: select @@tx_isolation;  
+<img width="125" alt="image" src="https://user-images.githubusercontent.com/96624836/197538530-25edeb56-8d38-4aeb-a8fa-2d021fd40b82.png">  
 Session 2: select @@tx_isolation;  
+<img width="125" alt="image" src="https://user-images.githubusercontent.com/96624836/197538530-25edeb56-8d38-4aeb-a8fa-2d021fd40b82.png">  
 Session 3: select @@tx_isolation;  
-<img width="125" alt="image" src="https://user-images.githubusercontent.com/96624836/197538530-25edeb56-8d38-4aeb-a8fa-2d021fd40b82.png">
+<img width="125" alt="image" src="https://user-images.githubusercontent.com/96624836/197538530-25edeb56-8d38-4aeb-a8fa-2d021fd40b82.png">  
 
+
+还原初始数据是刘备  
+Session 1: delete from tab_user where id = 1;  
+Session 1: insert into tab_user values(1, '刘备', 18, '蜀国');  
+Session 1: select * from tab_user;  
+<img width="227" alt="image" src="https://user-images.githubusercontent.com/96624836/197548069-e2f776ef-2760-4a5b-b851-294891551659.png">  
+
+开启事务 1, 2, 3  
+Session 1: begin;  
+Session 2: begin;  
+Session 3: begin;
+
+Session 1: update tab_user set name = '关羽' where id = 1;
+
+检查事务  
+<img width="681" alt="image" src="https://user-images.githubusercontent.com/96624836/197548419-9e14edd6-cee3-4201-a1d6-2f5ac55774e2.png">  
+
+Session 1: update tab_user set name = '张飞' where id = 1;
+
+检查事务  
+<img width="685" alt="image" src="https://user-images.githubusercontent.com/96624836/197548707-df1d813f-0ee6-470e-9766-80a6834e85c7.png">  
+
+Session 2: update tab_user set name = '赵云' where id = 1;  
+检查事务  
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/96624836/197549188-08910b44-edaa-438d-a164-7cf0f90c16f0.png">  
+
+Session 3: select * from tab_user;  
+<img width="226" alt="image" src="https://user-images.githubusercontent.com/96624836/197552222-68cd111a-14a0-4018-ae42-2e6e88e1a253.png">  
+
+Session 1: commit;  
+检查事务  
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/96624836/197552411-13c6d206-727f-43cc-b1d3-2f865a13fd80.png">  
+
+Session 3: select * from tab_user;  
+<img width="228" alt="image" src="https://user-images.githubusercontent.com/96624836/197552525-324a4991-e5bf-4784-acca-64e871d3fbfd.png">
+
+Session 2: update tab_user set name = '诸葛亮' where id = 1;
+检查事务  
+<img width="683" alt="image" src="https://user-images.githubusercontent.com/96624836/197552934-7b8ad11c-e09a-4434-8fd3-8a76933d46cd.png">
+
+Session 3: select * from tab_user;  
+<img width="229" alt="image" src="https://user-images.githubusercontent.com/96624836/197553117-887ac071-90f8-40b1-b975-b15da2b2239f.png">
+
+Session 2: commit;  
+检查事务  
+<img width="680" alt="image" src="https://user-images.githubusercontent.com/96624836/197553342-ca7e806b-ef11-4e53-a2cb-e3b276076f93.png">
+
+Session 3: commit;  
+检查事务  
+<img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197553657-9ed452a4-a7d5-48e8-b9c9-31e39323f6ea.png">
 
 
 结论
