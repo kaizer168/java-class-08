@@ -36,11 +36,11 @@ Session 1: update tab_user set name = '关羽' where id = 1;
 
 Session 1: update tab_user set name = '张飞' where id = 1;
 
-
 检查事务  
 <img width="677" alt="image" src="https://user-images.githubusercontent.com/96624836/197515445-e22b16d8-78d2-4403-abe2-6f7940e02594.png">
 
 Session 2: update tab_user set name = '赵云' where id = 1;  
+检查事务  
 <img width="684" alt="image" src="https://user-images.githubusercontent.com/96624836/197515722-1d8dff41-ca71-4757-8ac5-37db1e1d9a9e.png">
 
 Session 3: select * from tab_user;  
