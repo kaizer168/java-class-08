@@ -1,6 +1,9 @@
 ## 题目 01- 完成 ReadView 案例，解释为什么 RR 和 RC 隔离级别下看到查询结果不一致
 要求：
 
+<img width="451" alt="image" src="https://user-images.githubusercontent.com/96624836/197509777-4b0e511f-fed1-444b-ac95-0586f24eb16a.png">
+
+
 完成案例 01- 读已提交 RC 隔离级别下的可见性分析
 完成案例 02- 可重复读 RR 隔离级别下的可见性分析
 用通俗易懂的方式记录整个案例过程，可以画图与截图
