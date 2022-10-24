@@ -27,7 +27,8 @@ Session 3: select @@tx_isolation;
 <img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
 
 insert 初始数据是刘备  
-<img width="291" alt="image" src="https://user-images.githubusercontent.com/96624836/197511661-65b8323e-9bdb-414b-8a99-cd5bbd879250.png">  
+Session 1: insert into tab_user values(1, '刘备', 18, '蜀国');  
+Session 1: select * from tab_user;  
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/96624836/197512073-ae65e299-cad4-4e48-8939-5293bd29b972.png">
 
 
