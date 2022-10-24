@@ -19,6 +19,9 @@ Session 1: set session transaction isolation level read committed;
 Session 2: set session transaction isolation level read committed;  
 Session 3: set session transaction isolation level read committed;  
 确认 transaction isolation 为 RC  
+Session 1: select @@tx_isolation;  
+Session 2: select @@tx_isolation;  
+Session 3: select @@tx_isolation;  
 <img width="135" alt="image" src="https://user-images.githubusercontent.com/96624836/197510717-3eeb5490-4437-49b4-868a-d02d59aca70a.png">
 
 <img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
@@ -87,11 +90,12 @@ Session 1: set session transaction isolation level repeatable read;
 Session 2: set session transaction isolation level repeatable read;
 Session 3: set session transaction isolation level repeatable read;
 确认 transaction isolation 为 RR  
+Session 1: select @@tx_isolation;  
+Session 2: select @@tx_isolation;  
+Session 3: select @@tx_isolation;  
+<img width="125" alt="image" src="https://user-images.githubusercontent.com/96624836/197538530-25edeb56-8d38-4aeb-a8fa-2d021fd40b82.png">
 
-Session 1: set session transaction isolation level read committed;
-Session 2: set session transaction isolation level read committed;
-Session 3: set session transaction isolation level read committed;
-确认 transaction isolation 为 RC  
+
 
 结论
 结论分析
