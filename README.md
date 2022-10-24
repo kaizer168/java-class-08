@@ -83,16 +83,16 @@ Session 3: select * from tab_user;
 <img width="225" alt="image" src="https://user-images.githubusercontent.com/96624836/197554047-4cba4138-4f5d-4457-93e8-ffd4644cb7ac.png">
 
 
-### 结论
+### 结论  
 
-2. 案例 02- 可重复读 RR 隔离级别下的可见性分析
+### 2. 案例 02- 可重复读 RR 隔离级别下的可见性分析  
 
-目标
-操作步骤
-实践过程  
-Session 1: set session transaction isolation level repeatable read;
-Session 2: set session transaction isolation level repeatable read;
-Session 3: set session transaction isolation level repeatable read;
+### 目标  
+### 操作步骤  
+### 实践过程  
+Session 1: set session transaction isolation level repeatable read;  
+Session 2: set session transaction isolation level repeatable read;  
+Session 3: set session transaction isolation level repeatable read;  
 确认 transaction isolation 为 RR  
 Session 1: select @@tx_isolation;  
 <img width="125" alt="image" src="https://user-images.githubusercontent.com/96624836/197538530-25edeb56-8d38-4aeb-a8fa-2d021fd40b82.png">  
