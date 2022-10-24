@@ -14,6 +14,10 @@
 ### 目标
 ### 操作步骤
 ### 实践过程
+
+Session 1: set session transaction isolation level read committed;
+Session 2: set session transaction isolation level read committed;
+Session 3: set session transaction isolation level read committed;
 确认 transaction isolation 为 RC  
 <img width="135" alt="image" src="https://user-images.githubusercontent.com/96624836/197510717-3eeb5490-4437-49b4-868a-d02d59aca70a.png">
 
@@ -46,6 +50,31 @@ Session 2: update tab_user set name = '赵云' where id = 1;
 Session 3: select * from tab_user;  
 <img width="231" alt="image" src="https://user-images.githubusercontent.com/96624836/197516012-54ab66be-078e-4945-abef-4c8ed884a202.png">
 
+Session 1: commit;  
+检查事务  
+<img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197528820-23929c18-b19e-4d1b-b5a1-e4c46ed9d9ca.png">
+
+Session 3: select * from tab_user;  
+<img width="225" alt="image" src="https://user-images.githubusercontent.com/96624836/197529040-c6fc6e37-65ec-483e-a92a-6e96fa5581cf.png">
+
+Session 2: update tab_user set name = '诸葛亮' where id = 1;
+检查事务  
+<img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197531424-04fb8b08-48c4-4810-9b8a-3dfcf4c2442e.png">
+
+Session 3: select * from tab_user;  
+<img width="222" alt="image" src="https://user-images.githubusercontent.com/96624836/197531606-df9d5c41-866c-4520-872b-64fdeec05ad2.png">
+
+Session 2: commit;  
+检查事务  
+<img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197534317-e81466a2-62ac-4bcd-a820-eacb35557a6e.png">
+  
+Session 3: select * from tab_user;  
+<img width="221" alt="image" src="https://user-images.githubusercontent.com/96624836/197534430-35dce708-2245-41e6-8eb3-d28d33e5881c.png">
+
+Session 3: commit;  
+检查事务  
+<img width="681" alt="image" src="https://user-images.githubusercontent.com/96624836/197534759-de7e74b7-760f-4517-bdd7-ed7953626d51.png">
+
 
 ### 结论
 
@@ -53,7 +82,17 @@ Session 3: select * from tab_user;
 
 目标
 操作步骤
-实践过程
+实践过程  
+Session 1: set session transaction isolation level repeatable read;
+Session 2: set session transaction isolation level repeatable read;
+Session 3: set session transaction isolation level repeatable read;
+确认 transaction isolation 为 RR  
+
+Session 1: set session transaction isolation level read committed;
+Session 2: set session transaction isolation level read committed;
+Session 3: set session transaction isolation level read committed;
+确认 transaction isolation 为 RC  
+
 结论
 结论分析
 
