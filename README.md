@@ -24,7 +24,27 @@ insert 初始数据是刘备
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/96624836/197512073-ae65e299-cad4-4e48-8939-5293bd29b972.png">
 
 
-开启事务1
+开启事务 1, 2, 3
+Session 1: begin;
+Session 2: begin;
+Session 3: begin;
+
+Session 1: update tab_user set name = '关羽' where id = 1;
+
+检查事务  
+<img width="680" alt="image" src="https://user-images.githubusercontent.com/96624836/197514575-241bbd8b-5642-43f8-81e4-b84197f25a5a.png">
+
+Session 1: update tab_user set name = '张飞' where id = 1;
+
+
+检查事务  
+<img width="677" alt="image" src="https://user-images.githubusercontent.com/96624836/197515445-e22b16d8-78d2-4403-abe2-6f7940e02594.png">
+
+Session 2: update tab_user set name = '赵云' where id = 1;  
+<img width="684" alt="image" src="https://user-images.githubusercontent.com/96624836/197515722-1d8dff41-ca71-4757-8ac5-37db1e1d9a9e.png">
+
+Session 3: select * from tab_user;  
+<img width="231" alt="image" src="https://user-images.githubusercontent.com/96624836/197516012-54ab66be-078e-4945-abef-4c8ed884a202.png">
 
 
 ### 结论
