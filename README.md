@@ -24,9 +24,9 @@ insert 初始数据是刘备
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/96624836/197512073-ae65e299-cad4-4e48-8939-5293bd29b972.png">
 
 
-开启事务 1, 2, 3
-Session 1: begin;
-Session 2: begin;
+开启事务 1, 2, 3  
+Session 1: begin;  
+Session 2: begin;  
 Session 3: begin;
 
 Session 1: update tab_user set name = '关羽' where id = 1;
