@@ -15,9 +15,9 @@
 ### 操作步骤
 ### 实践过程
 
-Session 1: set session transaction isolation level read committed;
-Session 2: set session transaction isolation level read committed;
-Session 3: set session transaction isolation level read committed;
+Session 1: set session transaction isolation level read committed;  
+Session 2: set session transaction isolation level read committed;  
+Session 3: set session transaction isolation level read committed;  
 确认 transaction isolation 为 RC  
 <img width="135" alt="image" src="https://user-images.githubusercontent.com/96624836/197510717-3eeb5490-4437-49b4-868a-d02d59aca70a.png">
 
