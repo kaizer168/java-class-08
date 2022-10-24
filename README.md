@@ -148,9 +148,16 @@ Session 2: commit;
 检查事务  
 <img width="680" alt="image" src="https://user-images.githubusercontent.com/96624836/197553342-ca7e806b-ef11-4e53-a2cb-e3b276076f93.png">
 
+Session 3: select * from tab_user;  
+<img width="222" alt="image" src="https://user-images.githubusercontent.com/96624836/197561203-e18534eb-bd8b-4e99-8776-d39a52a34619.png">  
+
 Session 3: commit;  
 检查事务  
-<img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197553657-9ed452a4-a7d5-48e8-b9c9-31e39323f6ea.png">
+<img width="679" alt="image" src="https://user-images.githubusercontent.com/96624836/197553657-9ed452a4-a7d5-48e8-b9c9-31e39323f6ea.png">  
+
+Session 3: select * from tab_user;  
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/96624836/197561409-576b4e7f-13cd-410e-b268-2472497898b1.png">  
+
 
 ### 结论
 在 RR 隔离级别下，只有已提交的事务可读。
