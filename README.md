@@ -4,17 +4,31 @@
 <img width="451" alt="image" src="https://user-images.githubusercontent.com/96624836/197509777-4b0e511f-fed1-444b-ac95-0586f24eb16a.png">
 
 
-完成案例 01- 读已提交 RC 隔离级别下的可见性分析
-完成案例 02- 可重复读 RR 隔离级别下的可见性分析
+### 完成案例 01- 读已提交 RC 隔离级别下的可见性分析
+### 完成案例 02- 可重复读 RR 隔离级别下的可见性分析
 用通俗易懂的方式记录整个案例过程，可以画图与截图
 做完案例给出结论，并对结论进行分析
-回答范式：
-1. 案例 01- 读已提交 RC 隔离级别下的可见性分析
+### 回答范式：
+### 1. 案例 01- 读已提交 RC 隔离级别下的可见性分析
 
-目标
-操作步骤
-实践过程
-结论
+### 目标
+### 操作步骤
+### 实践过程
+确认 transaction isolation 为 RC
+<img width="135" alt="image" src="https://user-images.githubusercontent.com/96624836/197510717-3eeb5490-4437-49b4-868a-d02d59aca70a.png">
+
+<img width="116" alt="image" src="https://user-images.githubusercontent.com/96624836/197511134-5b78a182-e39c-4ae0-a75d-92a19b87aff4.png">
+
+insert 初始数据是刘备
+<img width="291" alt="image" src="https://user-images.githubusercontent.com/96624836/197511661-65b8323e-9bdb-414b-8a99-cd5bbd879250.png">
+<img width="222" alt="image" src="https://user-images.githubusercontent.com/96624836/197512073-ae65e299-cad4-4e48-8939-5293bd29b972.png">
+
+
+开启事务1
+
+
+### 结论
+
 2. 案例 02- 可重复读 RR 隔离级别下的可见性分析
 
 目标
